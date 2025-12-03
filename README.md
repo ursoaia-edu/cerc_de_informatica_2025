@@ -1,0 +1,1 @@
+# cerc_de_informatica_2025
