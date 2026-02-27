@@ -35,11 +35,11 @@ A 10 kΩ pull-up resistor between DATA and VCC is recommended for reliable commu
 
 ### Wiring Diagram
 
-![ESP32 dht11](../../images/ESP32-interfacing-with-dht11.webp)
+![ESP32 dht11](../images/ESP32-interfacing-with-dht11.webp)
 
-![ESP32 dht22 wifi](../../images/016-esp32-micropython-wifi-ap-techtotinker-diagram.png)
+![ESP32 dht22 wifi](../images/016-esp32-micropython-wifi-ap-techtotinker-diagram.png)
 
-![ESP32 dht22](../../images/esp32-micropython-dht22-temperature-humidity-sensor-wiring-diagram.jpg)
+![ESP32 dht22](../images/esp32-micropython-dht22-temperature-humidity-sensor-wiring-diagram.jpg)
 
 ---
 
