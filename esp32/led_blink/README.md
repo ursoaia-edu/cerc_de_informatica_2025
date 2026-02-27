@@ -106,11 +106,11 @@ while True:
 
 ### Wiring Diagram
 
-![ESP32 LED Wiring Diagram](../../images/esp32-micropython-led-wiring-diagram.jpg)
+![ESP32 LED Wiring Diagram](../images/esp32-micropython-led-wiring-diagram.jpg)
 
 ### LED Chaser in Action
 
-![ESP32 LED Chaser MicroPython](../../images/esp32-led-chaser-micropython-upycraft-ide.webp)
+![ESP32 LED Chaser MicroPython](../images/esp32-led-chaser-micropython-upycraft-ide.webp)
 
 ---
 
