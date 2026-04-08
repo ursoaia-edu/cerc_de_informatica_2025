@@ -1,5 +1,36 @@
 # main.py
 
+try:
+  import usocket as socket
+except:
+  import socket
+
+import network
+from machine import Pin
+import dht
+
+import esp
+esp.osdebug(None)
+
+import gc
+gc.collect()
+
+ssid = 'REPLACE_WITH_YOUR_SSID'
+password = 'REPLACE_WITH_YOUR_PASSWORD'
+
+station = network.WLAN(network.STA_IF)
+station.active(True)
+station.connect(ssid, password)
+
+while station.isconnected() == False:
+  pass
+
+print('Connection successful')
+print(station.ifconfig())
+
+sensor = dht.DHT22(Pin(14))
+#sensor = dht.DHT11(Pin(14))
+
 def read_sensor():
   global temp, hum
   temp = hum = 0
@@ -45,13 +76,13 @@ def web_page():
 <body>
   <h2>ESP DHT Server</h2>
   <p>
-    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i> 
-    <span class="dht-labels">Temperature</span> 
+    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i>
+    <span class="dht-labels">Temperature</span>
     <span>"""+str(temp)+"""</span>
     <sup class="units">&deg;C</sup>
   </p>
   <p>
-    <i class="fas fa-tint" style="color:#00add6;"></i> 
+    <i class="fas fa-tint" style="color:#00add6;"></i>
     <span class="dht-labels">Humidity</span>
     <span>"""+str(hum)+"""</span>
     <sup class="units">%</sup>
